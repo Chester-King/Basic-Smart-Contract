@@ -37,22 +37,30 @@ module.exports = {
 
   networks: {
 
-    mandala: {
+    mandalaTC7: {
       provider: () => new HDWalletProvider(mnemonic, "https://tc7-eth.aca-dev.network"),
+      network_id: 595,
+      gasPrice: 0x2f0a6303ea, // storage_limit = 64001, validUntil = 360001, gasLimit = 10000000
+      gas: 0x329b140,
+      timeoutBlocks: 25,
+      confirmations: 0
+    },
+    mandala: {
+      provider: () => new HDWalletProvider(mnemonic, "http://127.0.0.1:8545"),
       network_id: 595,
       gasPrice: 0x2f03a803ea, // storage_limit = 64001, validUntil = 360001, gasLimit = 10000000
       gas: 0x329b140,
       timeoutBlocks: 25,
       confirmations: 0
-  },
-  rinkeby: {
+    },
+    rinkeby: {
       provider: () => new HDWalletProvider(mnemonic, rinkebyrpc),
       network_id: 4,       // Ropsten's id
       gas: 5500000,        // Ropsten has a lower block limit than mainnet
       confirmations: 0,    // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
-      }
+    }
 
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
@@ -95,10 +103,10 @@ module.exports = {
    // Set default mocha options here, use special reporters etc.
    mocha: {
     // timeout: 100000
-    reporter: 'eth-gas-reporter',
-    reporterOptions : { 
+    // reporter: 'eth-gas-reporter',
+    // reporterOptions : { 
         
-     }
+    //  }
 },
   // Configure your compilers
   compilers: {

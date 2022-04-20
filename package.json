@@ -7,7 +7,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-mandala": "truffle test --network mandala",
+    "deploy-mandala": "truffle migrate --network mandala",
+    "deploy-mandala:TC7": "truffle migrate --network mandalaTC7"
   },
   "keywords": [],
   "author": "",
@@ -17,9 +20,10 @@
     "@openzeppelin/test-helpers": "^0.5.15",
     "@openzeppelin/truffle-upgrades": "^1.9.1",
     "@truffle/hdwallet-provider": "^1.5.0",
+    "truffle": "^5.5.10",
     "truffle-contract-size": "^2.0.1"
-},
-"devDependencies": {
+  },
+  "devDependencies": {
     "eth-gas-reporter": "^0.2.22",
     "prettier": "^2.4.1",
     "prettier-plugin-solidity": "^1.0.0-beta.18",
@@ -27,5 +31,5 @@
     "solhint-plugin-prettier": "0.0.5",
     "solidity-coverage": "^0.8.0-beta.0",
     "web3": "1.5.2"
-}
+  }
 }
