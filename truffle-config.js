@@ -40,7 +40,7 @@ module.exports = {
     mandalaTC7: {
       provider: () => new HDWalletProvider(mnemonic, "https://tc7-eth.aca-dev.network"),
       network_id: 595,
-      gasPrice: 0x2f03a803ea, // storage_limit = 64001, validUntil = 360001, gasLimit = 10000000
+      gasPrice: 0x2f0a6303ea, // storage_limit = 64001, validUntil = 360001, gasLimit = 10000000
       gas: 0x329b140,
       timeoutBlocks: 25,
       confirmations: 0

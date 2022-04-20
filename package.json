@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test-mandala": "truffle test --network mandala",
-    "deploy-mandala": "truffle migrate --network mandala"
+    "deploy-mandala": "truffle migrate --network mandala",
+    "deploy-mandala:TC7": "truffle migrate --network mandalaTC7"
   },
   "keywords": [],
   "author": "",
